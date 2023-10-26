@@ -1,6 +1,6 @@
 import random
 
-def check_guess(guess):
+def check_guess_letter_in_fruit(guess):
     guess = guess.lower()
     
     if guess in fruit:
@@ -9,7 +9,7 @@ def check_guess(guess):
         print(f'Sorry, {guess} is not in the word. Try again.')
 
 
-def ask_for_input():
+def guess_the_letter():
     
     while True:
         guess = input('Enter a single letter: ')
@@ -18,10 +18,10 @@ def ask_for_input():
         else:
             print('Invalid letter. Please, enter a single alphabetical character.')
 
-    check_guess(guess)
+    check_guess_letter_in_fruit(guess)
 
 fruit_list = ['kiwi', 'strawberry', 'mango', 'banana', 'apple']
 fruit = random.choice(fruit_list)
 
 
-ask_for_input()
+guess_the_letter()
