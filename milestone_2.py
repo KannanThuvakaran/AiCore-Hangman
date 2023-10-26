@@ -1,20 +1,19 @@
 import random
 
-'''Task 1'''
-word_list = ['kiwi', 'strawberry', 'mango', 'banana', 'apple']
-# print(word_list)
+# Task 1
+fruit_list = ['kiwi', 'strawberry', 'mango', 'banana', 'apple']
 
-'''Task 2'''
-word = random.choice(word_list)
-# 4print(word)
+
+# Task 2
+guess_fruit = random.choice(fruit_list)
+
 
 '''Task 3'''
-guess = input('Enter a single letter: ')
+letter_guess = input('Enter a single letter: ')
 
 '''Task 4'''
-if len(guess) == 1 and guess.isalpha() == True:
+if len(letter_guess) == 1 and letter_guess.isalpha() == True:
     print('Good guess!')
 else:
     print('Oops! That is not a valid input.')
 
-    
