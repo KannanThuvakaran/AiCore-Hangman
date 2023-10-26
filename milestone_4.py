@@ -38,7 +38,7 @@ class Hangman:
             elif guess in self.list_of_guesses == True:
                 print('You already tried that letter!')
             else:
-                self.check_guess(guess)
+                self._check_guess(guess)
                 self.list_of_guesses += guess
 
 game = Hangman(['kiwi', 'strawberry', 'mango', 'banana', 'apple'])
