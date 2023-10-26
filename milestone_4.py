@@ -1,6 +1,7 @@
 import random
 
 class Hangman:
+    ''' Doc Strings etc... '''
 
     def __init__(self, word_list, num_lives=5):
         
@@ -12,7 +13,7 @@ class Hangman:
         self.list_of_guesses = []
         
 
-    def check_guess(self, guess):
+    def _check_guess(self, guess):
 
         guess = guess.lower()
 
