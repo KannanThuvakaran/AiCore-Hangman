@@ -38,6 +38,6 @@ This is an implementation of the Hangman game, where the computer thinks of a wo
 
 **milestones**: A folder that contains four milestone Python files, each representing parts of the main aspect of the Hangman game, with the guidance of AIcore to combine and create this project.
 
-## License information
+## License
 
 This project is open to the public.
