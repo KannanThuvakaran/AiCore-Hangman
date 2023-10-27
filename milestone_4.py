@@ -22,6 +22,7 @@ class Hangman:
             for index, letter in enumerate(self.word):
                 if letter == guess:
                     self.word_guessed[index] = guess
+            print(self.word_guessed)        
             self.num_letters -= 1
             
         else:
@@ -30,18 +31,14 @@ class Hangman:
             print(f'You have {self.num_lives} lives left')
 
     def ask_for_input(self):
-        
-        while True:
-            guess = input('Enter a single letter: ')
-            if len(guess) != 1 or guess.isalpha() == False:
-                print('Invalid letter. Please, enter a single alphabetical character.')
-            elif guess in self.list_of_guesses == True:
-                print('You already tried that letter!')
-            else:
-                self._check_guess(guess)
-                self.list_of_guesses += guess
 
-game = Hangman(['kiwi', 'strawberry', 'mango', 'banana', 'apple'])
-game.ask_for_input()
+        guess = input('Enter a single letter: ')
+        if len(guess) != 1 or not guess.isalpha():
+            print('Invalid letter. Please, enter a single alphabetical character.')
+        elif guess in self.list_of_guesses:
+            print('You already tried that letter!')
+        else:
+            self._check_guess(guess)
+            self.list_of_guesses.append(guess)
 
 
